@@ -1,0 +1,306 @@
+/* About Page Styles */
+/* Menggunakan warna dari style.css yang sudah ada */
+
+.about-hero {
+    position: relative;
+    padding: 8rem 5% 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1;
+    animation: slideInRight 1s ease-out forwards;
+    opacity: 0;
+}
+
+.about-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(120deg, var(--text-light), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite alternate;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Pendidikan Section Styles */
+.pendidikan {
+    padding: 5rem 5%;
+    background-color: #1f4d8a;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pendidikan-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #195091;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pendidikan-item {
+    margin-bottom: 2.5rem;
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+.pendidikan-item:nth-child(1) { animation-delay: 0.2s; }
+.pendidikan-item:nth-child(2) { animation-delay: 0.4s; }
+.pendidikan-item:nth-child(3) { animation-delay: 0.6s; }
+.pendidikan-item:nth-child(4) { animation-delay: 0.8s; }
+
+.pendidikan-item:last-child {
+    margin-bottom: 0;
+}
+
+.pendidikan-year {
+    flex: 0 0 150px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    padding-top: 5px;
+}
+
+.pendidikan-content {
+    flex: 1;
+}
+
+.pendidikan-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.pendidikan-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #a3c6df;
+    font-weight: 300;
+}
+
+/* Skill Section Styles */
+.skill {
+    padding: 5rem 5%;
+    background-color: var(--primary-color);
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-item:nth-child(5) { animation-delay: 0.5s; }
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, var(--accent-color), transparent);
+    z-index: -1;
+    transform: scale(0.9);
+    animation: pulse 3s infinite;
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.skill-item:hover img {
+    transform: scale(1.2);
+}
+
+.skill-item h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text p {
+        max-width: 100%;
+    }
+    
+    .pendidikan-item {
+        flex-direction: column;
+    }
+    
+    .pendidikan-year {
+        margin-bottom: 0.5rem;
+    }
+    
+    .pendidikan-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .about-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-text h2 {
+        font-size: 2rem;
+    }
+    
+    .skill-container {
+        gap: 1.5rem;
+    }
+    
+    .skill-item {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .skill-item img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        padding-top: 6rem;
+    }
+    
+    .pendidikan-container {
+        padding: 1.5rem;
+    }
+    
+    .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+}

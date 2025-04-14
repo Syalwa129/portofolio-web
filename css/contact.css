@@ -1,0 +1,260 @@
+/* Contact Page Specific Styles */
+
+/* Contact Main Section */
+.contact-main {
+    background-color: var(--primary-color);
+    padding: 8rem 5% 5rem;
+    min-height: 80vh;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-info img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    margin-top: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.contact-item i {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.contact-form-section h2 {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-form-container {
+    background-color: #1f4d8a;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 0;
+    color: var(--text-light);
+    font-family: 'Kanit', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    float: right;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Decorations */
+.decorations i {
+    position: absolute;
+    opacity: 0.2;
+    color: white;
+    z-index: 1;
+}
+
+/* Stars */
+.star-1 {
+    top: 20%;
+    left: -10%;
+    font-size: 1.2rem;
+}
+
+.star-2 {
+    top: 30%;
+    right: -15%;
+    font-size: 1.5rem;
+}
+
+.star-3 {
+    bottom: 10%;
+    left: -5%;
+    font-size: 1rem;
+}
+
+.star-4 {
+    bottom: 20%;
+    right: -10%;
+    font-size: 1.3rem;
+}
+
+.star-5 {
+    top: 10%;
+    left: 40%;
+    font-size: 1.1rem;
+}
+
+.star-6 {
+    bottom: 15%;
+    left: 30%;
+    font-size: 0.9rem;
+}
+
+/* Circles */
+.circle-1 {
+    top: 40%;
+    left: 20%;
+    font-size: 0.4rem;
+}
+
+.circle-2 {
+    top: 60%;
+    right: 10%;
+    font-size: 0.3rem;
+}
+
+.circle-3 {
+    bottom: 30%;
+    left: 15%;
+    font-size: 0.5rem;
+}
+
+.circle-4 {
+    top: 15%;
+    right: 25%;
+    font-size: 0.3rem;
+}
+
+/* Footer styles are inherited from main style.css */
+/* Note: No footer-specific styling is added to this file */
+/* to maintain consistency with other pages */
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .contact-form-section {
+        flex: 0 0 100%;
+    }
+    
+    .contact-info {
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    
+    .contact-details {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-main {
+        padding-top: 6rem;
+    }
+    
+    .contact-info img {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .contact-form-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        float: none;
+    }
+}
