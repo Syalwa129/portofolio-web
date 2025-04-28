@@ -26,7 +26,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: slideInLeft 1s ease-out forwards;
+    animation: mySlideInLeft 1s ease-out forwards; /* Mengubah slideInLeft menjadi mySlideInLeft */
     opacity: 0;
 }
 
@@ -43,7 +43,7 @@
 
 .about-text {
     flex: 1;
-    animation: slideInRight 1s ease-out forwards;
+    animation: mySlideInRight 1s ease-out forwards; /* Mengubah slideInRight menjadi mySlideInRight */
     opacity: 0;
 }
 
@@ -62,7 +62,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
-    animation: shimmer 3s infinite alternate;
+    animation: myShimmer 3s infinite alternate; /* Mengubah shimmer menjadi myShimmer */
 }
 
 .about-text p {
@@ -118,7 +118,7 @@
     margin-bottom: 2.5rem;
     display: flex;
     opacity: 0;
-    animation: fadeIn 0.8s forwards;
+    animation: myFadeIn 0.8s forwards; /* Mengubah fadeIn menjadi myFadeIn */
 }
 
 .pendidikan-item:nth-child(1) { animation-delay: 0.2s; }
@@ -185,7 +185,7 @@
     position: relative;
     overflow: hidden;
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: myFadeIn 0.5s forwards; /* Mengubah fadeIn menjadi myFadeIn */
 }
 
 .skill-item:nth-child(1) { animation-delay: 0.1s; }
@@ -205,7 +205,7 @@
     background: linear-gradient(45deg, transparent, var(--accent-color), transparent);
     z-index: -1;
     transform: scale(0.9);
-    animation: pulse 3s infinite;
+    animation: myPulse 3s infinite; /* Mengubah pulse menjadi myPulse */
 }
 
 .skill-item img {

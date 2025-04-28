@@ -13,10 +13,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Custom animation delay classes */
+        .animate__delay-300ms {
+            animation-delay: 300ms;
+        }
+        .animate__delay-500ms {
+            animation-delay: 500ms;
+        }
+        .animate__delay-700ms {
+            animation-delay: 700ms;
+        }
+        /* Make animations trigger on scroll */
+        .animate__animated.animate__onScroll {
+            opacity: 0;
+        }
+        .animate__animated.animate__onScroll.animate__show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="animate__animated animate__fadeInDown">
         <div class="logo">
             <img src="image/logoawapemarah.png" alt="SS Logo">
         </div>
@@ -32,15 +53,15 @@
     <!-- Gallery Intro Section -->
     <section id="gallery-intro" class="gallery-intro">
         <div class="gallery-intro-content">
-            <h1>Jelajahi perjalanan dan petualangan saya melalui galeri foto ini.</h1>
-            <p>Setiap gambar adalah jendela ke dalam pengalaman yang telah membentuk saya</p>
+            <h1 class="animate__animated animate__fadeIn">Jelajahi perjalanan dan petualangan saya melalui galeri foto ini.</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-500ms">Setiap gambar adalah jendela ke dalam pengalaman yang telah membentuk saya</p>
         </div>
     </section>
 
     <!-- Main Gallery Content -->
     <section id="gallery-main" class="gallery-main">
         <!-- Gallery Item 1 -->
-        <div class="gallery-item">
+        <div class="gallery-item animate__animated animate__onScroll">
             <div class="gallery-image">
                 <img src="image/pkl.png" alt="PKL Dinas PU">
             </div>
@@ -51,7 +72,7 @@
         </div>
 
         <!-- Gallery Item 2 -->
-        <div class="gallery-item reverse-layout">
+        <div class="gallery-item reverse-layout animate__animated animate__onScroll">
             <div class="gallery-image">
                 <img src="image/lomba.jpeg" alt="Lomba Accounting Quiz">
             </div>
@@ -62,7 +83,7 @@
         </div>
 
         <!-- Gallery Item 3 -->
-        <div class="gallery-item">
+        <div class="gallery-item animate__animated animate__onScroll">
             <div class="gallery-image">
                 <img src="image/lk23.jpg" alt="Bukit Harapan">
             </div>
@@ -73,7 +94,7 @@
         </div>
 
         <!-- Gallery Item 4 -->
-        <div class="gallery-item reverse-layout">
+        <div class="gallery-item reverse-layout animate__animated animate__onScroll">
             <div class="gallery-image">
                 <img src="image/lk24.jpeg" alt="Aula Bulutana Malino">
             </div>
@@ -86,21 +107,21 @@
 
     <!-- Small Gallery Grid -->
     <section id="gallery-grid" class="gallery-grid">
-        <div class="gallery-grid-item">
+        <div class="gallery-grid-item animate__animated animate__onScroll">
             <img src="image/tsm.jpg" alt="Trans Studio Mall">
             <div class="gallery-grid-content">
                 <h3>30 Juni 2024 - Trans Studio Mall Makassar</h3>
                 <p>Saya bekerja sebagai shopkeeper, dimana saya mengelola penjualan dan memberikan pelayanan terbaik</p>
             </div>
         </div>
-        <div class="gallery-grid-item">
+        <div class="gallery-grid-item animate__animated animate__onScroll animate__delay-300ms">
             <img src="image/phipo.jpg" alt="Phinisi Point Mall">
             <div class="gallery-grid-content">
                 <h3>30 Juni 2023 - Phinisi Point Mall Makassar</h3>
                 <p>Sebagai kasir di event Dino-Xscape Makassar, saya mengelola transaksi dan memberikan layanan pelanggan yang memuaskan</p>
             </div>
         </div>
-        <div class="gallery-grid-item">
+        <div class="gallery-grid-item animate__animated animate__onScroll animate__delay-500ms">
             <img src="image/tari.jpg" alt="Korban 40.000 Jiwa">
             <div class="gallery-grid-content">
                 <h3>30 AGUSTUS 2022 - Korban 40.000 Jiwa, Makassar</h3>
@@ -110,7 +131,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" class="animate__animated animate__fadeIn animate__delay-700ms">
         <div class="footer-content">
             <div class="contact-info">
                 <h3><i class="fas fa-address-card"></i> Contact</h3>
@@ -139,6 +160,45 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Script untuk menampilkan animasi saat scrolling
+        $(document).ready(function() {
+            // Fungsi untuk mengecek apakah elemen dalam viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            // Fungsi untuk menambahkan animasi saat elemen terlihat
+            function checkVisibility() {
+                $('.animate__onScroll').each(function() {
+                    if (isInViewport(this)) {
+                        // Pilih animasi berdasarkan posisi
+                        if ($(this).hasClass('reverse-layout')) {
+                            $(this).addClass('animate__fadeInRight animate__show');
+                        } else {
+                            $(this).addClass('animate__fadeInLeft animate__show');
+                        }
+                    }
+                });
+                
+                $('.gallery-grid-item.animate__onScroll').each(function() {
+                    if (isInViewport(this)) {
+                        $(this).addClass('animate__fadeInUp animate__show');
+                    }
+                });
+            }
+            
+            // Panggil saat halaman dimuat dan saat scrolling
+            checkVisibility();
+            $(window).scroll(function() {
+                checkVisibility();
+            });
+        });
+    </script>
 </body>
 </html>

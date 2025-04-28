@@ -60,7 +60,7 @@
             <div class="contact-form-section">
                 <h2>Ayo kerja sama!</h2>
                 <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/GANTI_DENGAN_KODE_FORMSPREE_ANDA" method="POST">
+                    <form id="contactForm" class="contact-form">
                         <div class="form-group">
                             <label for="nama">Nama:</label>
                             <input type="text" id="nama" name="nama" required>
@@ -75,12 +75,6 @@
                         </div>
                         <button type="submit" class="submit-btn">Kirim</button>
                     </form>
-                    
-                    <div id="success-message" class="form-success">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Terima kasih!</h3>
-                        <p>Pesan Anda telah berhasil dikirim.</p>
-                    </div>
                 </div>
                 <div class="decorations">
                     <i class="star-1 fas fa-star"></i>
@@ -127,50 +121,4 @@
             </div>
         </div>
     </footer>
-    
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contactForm');
-        const successMessage = document.getElementById('success-message');
-        
-        // Sembunyikan pesan sukses saat awal
-        successMessage.style.display = 'none';
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(form);
-            
-            // Ganti dengan action URL yang sesuai dari form
-            fetch(form.getAttribute('action'), {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Tampilkan pesan sukses
-                    form.style.display = 'none';
-                    successMessage.style.display = 'block';
-                    
-                    // Reset form setelah 5 detik dan tampilkan kembali
-                    setTimeout(() => {
-                        form.reset();
-                        form.style.display = 'block';
-                        successMessage.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
-            });
-        });
-    });
-    </script>
-</body>
-</html>
+    <script src="js/script.js"></script>
