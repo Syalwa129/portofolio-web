@@ -13,10 +13,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
+  <nav class="animate__animated animate__fadeInDown">
     <div class="logo">
       <img src="image/logoawapemarah.png" alt="SS Logo" />
     </div>
@@ -30,25 +32,25 @@
   </nav>
 
   <!-- Contact Main Section -->
-  <section id="contact-main" class="contact-main">
+  <section id="contact-main" class="contact-main animate__animated animate__fadeIn animate__delay-1s">
     <div class="contact-container">
-      <div class="contact-info">
-        <img src="image/profil.jpg" alt="Syalwa Putri Aditria" />
+      <div class="contact-info animate__animated animate__fadeInLeft animate__delay-1s">
+        <img src="image/profil.jpg" alt="Syalwa Putri Aditria" class="animate__animated animate__zoomIn animate__delay-2s" />
         <div class="contact-details">
-          <div class="contact-item">
-            <div class="icon-container">
+          <div class="contact-item animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="icon-container animate__animated animate__heartBeat animate__delay-3s animate__slow animate__infinite">
               <i class="fas fa-phone"></i>
             </div>
             <p>+62 831 3300 7307</p>
           </div>
-          <div class="contact-item">
-            <div class="icon-container">
+          <div class="contact-item animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="icon-container animate__animated animate__heartBeat animate__delay-3s animate__slow animate__infinite">
               <i class="fas fa-envelope"></i>
             </div>
             <p>syalwaputriaditria@gmail.com</p>
           </div>
-          <div class="contact-item">
-            <div class="icon-container">
+          <div class="contact-item animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="icon-container animate__animated animate__heartBeat animate__delay-3s animate__slow animate__infinite">
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <p>Makassar, Sulawesi Selatan</p>
@@ -57,37 +59,37 @@
       </div>
 
       <!-- Contact Form Section -->
-      <div class="contact-form-section">
-        <h2>Ayo kerja sama!</h2>
+      <div class="contact-form-section animate__animated animate__fadeInRight animate__delay-1s">
+        <h2 class="animate__animated animate__rubberBand animate__delay-2s">Ayo kerja sama!</h2>
         <div class="contact-form-container">
           <form action="https://formspree.io/f/mwpooage" method="POST" id="contactForm" class="contact-form">
-            <div class="form-group">
+            <div class="form-group animate__animated animate__fadeInUp animate__delay-2s">
               <label for="nama">Nama:</label>
               <input type="text" id="nama" name="nama" required />
             </div>
-            <div class="form-group">
+            <div class="form-group animate__animated animate__fadeInUp animate__delay-2s">
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required />
             </div>
-            <div class="form-group">
+            <div class="form-group animate__animated animate__fadeInUp animate__delay-2s">
               <label for="pesan">Pesan:</label>
               <textarea id="pesan" name="pesan" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">Kirim</button>
+            <button type="submit" class="submit-btn animate__animated animate__pulse animate__infinite animate__slow">Kirim</button>
             <p id="form-message" style="color: white; margin-top: 1rem;"></p>
           </form>
         </div>
         <div class="decorations">
-          <i class="star-1 fas fa-star"></i>
-          <i class="star-2 fas fa-star"></i>
-          <i class="star-3 fas fa-star"></i>
-          <i class="star-4 fas fa-star"></i>
-          <i class="star-5 fas fa-star"></i>
-          <i class="star-6 fas fa-star"></i>
-          <i class="circle-1 fas fa-circle"></i>
-          <i class="circle-2 fas fa-circle"></i>
-          <i class="circle-3 fas fa-circle"></i>
-          <i class="circle-4 fas fa-circle"></i>
+          <i class="star-1 fas fa-star animate__animated animate__twinkle animate__infinite animate__slow"></i>
+          <i class="star-2 fas fa-star animate__animated animate__twinkle animate__infinite animate__slower"></i>
+          <i class="star-3 fas fa-star animate__animated animate__twinkle animate__infinite"></i>
+          <i class="star-4 fas fa-star animate__animated animate__twinkle animate__infinite animate__slower"></i>
+          <i class="star-5 fas fa-star animate__animated animate__twinkle animate__infinite animate__slow"></i>
+          <i class="star-6 fas fa-star animate__animated animate__twinkle animate__infinite"></i>
+          <i class="circle-1 fas fa-circle animate__animated animate__fadeIn animate__infinite animate__slower"></i>
+          <i class="circle-2 fas fa-circle animate__animated animate__fadeIn animate__infinite animate__slow"></i>
+          <i class="circle-3 fas fa-circle animate__animated animate__fadeIn animate__infinite"></i>
+          <i class="circle-4 fas fa-circle animate__animated animate__fadeIn animate__infinite animate__slower"></i>
         </div>
       </div>
     </div>
@@ -141,13 +143,30 @@
         if (response.ok) {
           message.textContent = "Pesan berhasil dikirim. Terima kasih!";
           form.reset();
+          message.className = "animate__animated animate__bounceIn";
         } else {
           message.textContent = "Ups! Terjadi kesalahan. Coba lagi ya.";
+          message.className = "animate__animated animate__shakeX";
         }
       }).catch(error => {
         message.textContent = "Ups! Tidak bisa terhubung ke server.";
+        message.className = "animate__animated animate__shakeX";
       });
     });
+
+    // Custom animation untuk bintang berkedip
+    document.head.insertAdjacentHTML("beforeend", `
+    <style>
+      @keyframes twinkle {
+        0% { opacity: 1; }
+        50% { opacity: 0.3; }
+        100% { opacity: 1; }
+      }
+      .animate__twinkle {
+        animation-name: twinkle;
+      }
+    </style>
+    `);
   </script>
 </body>
 </html>

@@ -1,122 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Syalwa Putri Aditria - Portfolio</title>
-            <link rel="stylesheet" href="css/style.css">
-            <!-- Font Awesome -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-            <!-- Google Fonts - Kanit -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-            <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        </head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Syalwa Putri Aditria - Portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Google Fonts - Kanit -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
+</head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <img src="image/logoawapemarah.png" alt="SS Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+   <!-- Navigation -->
+   <nav class="animate_animated animate_fadeIn">
+    <div class="logo">
+        <img src="image/logoawapemarah.png" alt="SS Logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="animate_animated animate_fadeIn" style="animation-delay: 0.1s;">Home</a></li>
+        <li><a href="about.html" class="animate_animated animate_fadeIn" style="animation-delay: 0.2s;">About</a></li>
+        <li><a href="gallery.html" class="animate_animated animate_fadeIn" style="animation-delay: 0.3s;">Gallery</a></li>
+        <li><a href="blog.html" class="animate_animated animate_fadeIn" style="animation-delay: 0.4s;">Blog</a></li>
+        <li><a href="contact.html" class="animate_animated animate_fadeIn" style="animation-delay: 0.5s;">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-image">
-                <img src="image/profil.jpg" alt="Syalwa Putri Aditria">
-            </div>
-            <div class="hero-text">
-                <h1>Halo! <i class="fas fa-hand-wave"></i></h1>
-                <h2>SYALWA PUTRI ADITRIA</h2>
-                <h3>MAHASISWA BISNIS DIGITAL</h3>
-                <p>Portofolio ini menampilkan proyek-proyek yang mencerminkan kemampuan saya. Mari menciptakan kolaborasi bersama!</p>
-                <a href="about.html" class="cta-button">See more</a>
-            </div>
+   <!-- Hero Section -->
+   <section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-image animate__animated animate__fadeIn" style="animation-delay: 0.3s;">
+            <img src="image/profil.jpg" alt="Syalwa Putri Aditria">
         </div>
-    </section>
+        <div class="hero-text">
+            <h1 class="animate__animated animate__fadeInUp">Halo!</h1>
+            <h2 class="animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">SYALWA PUTRI ADITRIA</h2>
+            <h3 class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s;"> MAHASISWA BISNIS DIGITAL</h3>
+            <p class="animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">Portofolio ini menampilkan proyek-proyek yang mencerminkan kemampuan saya. Mari menciptakan kolaborasi bersama!</p>
+            <a href="about.html">
+                <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s">See more</button>
+              </a>
+        </div>
+    </div>
+</section>
+
     
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-      <div class="gallery-grid">
-          <div class="gallery-item">
-              <img src="image/tsm.jpg" alt="Gallery Image 1">
-              <div class="date">30 JUNI 2024</div>
-          </div>
-          <div class="gallery-item">
-              <img src="image/phipo.jpg" alt="Gallery Image 2">
-              <div class="date">30 JUNI 2023</div>
-          </div>
-          <div class="gallery-item">
-              <img src="image/tari.jpg" alt="Gallery Image 3">
-              <div class="date">30 AGUSTUS 2022</div>
-          </div>
-      </div>
-      <button class="see-more">See more</button>
-  </section>
+<section id="gallery" class="gallery animate__animated animate__fadeIn" style="animation-delay: 0.8s;">
+    <div class="gallery-grid">
+        <div class="gallery-item animate__animated animate__fadeInLeft" style="animation-delay: 1s;">
+            <a href="gallery.html">
+                <img src="image/tsm.jpg" alt="Gallery Image 1">
+                <div class="date">30 JUNI 2024</div>
+            </a>
+        </div>
+        <div class="gallery-item animate__animated animate__fadeInUp" style="animation-delay: 1.2s;">
+            <a href="gallery.html">
+                <img src="image/phipo.jpg" alt="Gallery Image 2">
+                <div class="date">30 JUNI 2023</div>
+            </a>
+        </div>
+        <div class="gallery-item animate__animated animate__fadeInRight" style="animation-delay: 1.4s;">
+            <a href="gallery.html">
+                <img src="image/tari.jpg" alt="Gallery Image 3">
+                <div class="date">30 AGUSTUS 2022</div>
+            </a>
+        </div>
+    </div>
+    <a href="gallery.html">
+    <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s">See more</button>
+</section>
 
     <!-- Blog  -->
-    <section id="blog" class="blog">
-      <div class="blog-container">
-          <article class="blog-post">
-              <img src="image/bmc.jpg" alt="Business Model Canvas">
-              <div class="blog-content">
-                  <h3>Business Model Canvas: Alat Penting bagi Kewirausahaan Modern</h3>
-                  <p>Dengan BMC, kita bisa memahami bagaimana sebuah bisnis dapat berkembang, mengidentifikasi nilai utama dan cara untuk mengoptimalkan keuntungan...</p>
-              </div>
-          </article>
+</section><section id="blog" class="blog"><a>
+    <div class="blog-container">
+        <article class="blog-post reveal-on-scroll revealed">
+            <img src="image/bmc.jpg" alt="Business Model Canvas">
+            <a href="blog.html">
+            <div class="blog-content">
+                <h3>Business Model Canvas: Alat Penting bagi Kewirausahaan Modern</h3>
+                <p>Dengan BMC, kita bisa memahami bagaimana sebuah bisnis dapat berkembang, mengidentifikasi nilai utama dan cara untuk mengoptimalkan keuntungan...</p>
+            </div>
+        </article>
 
-          <article class="blog-post">
-              <img src="image/digmar.jpg" alt="Digital Marketing">
-              <div class="blog-content">
-                  <h3>Belajar Digital Marketing itu seperti petualangan seru di dunia online</h3>
-                  <p>Digital Marketing adalah cara mempromosikan produk atau layanan melalui internet, seperti media sosial, website atau platform digital lainnya...</p>
-                  <button class="see-more">See more</button>
-              </div>
-          </article>
-      </div>
-  </section>
+        <article class="blog-post reveal-on-scroll revealed">
+            <img src="image/digmar.jpg" alt="Digital Marketing">
+            <div class="blog-content">
+                <h3>Belajar Digital Marketing itu seperti petualangan seru di dunia online</h3>
+                <p>Digital Marketing adalah cara mempromosikan produk atau layanan melalui internet, seperti media sosial, website atau platform digital lainnya...</p>
+
+            </div>
+        </article>
+    </div>
+    </a><a href="http://127.0.0.1:5500/blog.html">
+      <button class="cta-button animate__animated animate__fadeInUp animate__delay-1s">See more</button>
+</a></section><a href="http://127.0.0.1:5500/blog.html">
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3><i class="fas fa-address-card"></i> Contact</h3>
-                <p><i class="fas fa-envelope"></i> Email: syalwaputriaditria@gmail.com</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/syalwa_ptr?igsh=dGM1dmthNGkza2o3&utm_source=qr" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@jlurlngit?_t=ZS-8ux7Ux75z50&_r=1" class="tiktok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="navigation">
-              <h3>Navigation</h3>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </div>
+</a><footer id="contact"><div class="footer-content"><div class="contact-info"><a>
+    <h3><i class="fas fa-address-card"></i> Contact</h3>
+    <p><i class="fas fa-envelope"></i> Email: syalwaputriaditria@gmail.com</p>
+    </a><div class="social-links"><a href="https://www.instagram.com/syalwa_ptr?igsh=dGM1dmthNGkza2o3&amp;utm_source=qr" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@jlurlngit?_t=ZS-8ux7Ux75z50&amp;_r=1" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    </div>
+</div>
 
-            <div class="footer-logo">
-                <img src="image/logoawapemarah.png" alt="SP Logo">
-                <p>by Syalwa Putri Aditria <i class="far fa-copyright"></i></p>
-            </div>
-        </div>
-    </footer>
+<div class="navigation">
+  <h3>Navigation</h3>
+  <ul>
+      <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+      <li><a href="http://127.0.0.1:5500/about.html">About</a></li>
+      <li><a href="http://127.0.0.1:5500/gallery.html">Gallery</a></li>
+      <li><a href="http://127.0.0.1:5500/blog.html">Blog</a></li>
+      <li><a href="http://127.0.0.1:5500/contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="footer-logo">
+    <img src="image/logoawapemarah.png" alt="SS Logo">
+    <p>by Syalwa Putri Aditria <i class="far fa-copyright"></i></p>
+</div>
+</div>
+</footer>
     <script src="js/script.js"></script>
 </body>
 </html>
